@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Tycoon - School Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-600 text-white p-6">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold">Café Tycoon</h1>
+            <p class="mt-2">A Strategic Business Simulation Game</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+            <p>Welcome to Café Tycoon, a strategic business simulation game where players manage their own café and
+                compete against other businesses on the Zuidplein. Players must navigate rising rental costs and aim to
+                outlast their competitors.</p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Key Features</h2>
+            <ul class="list-disc list-inside">
+                <li>Manage and grow your own café.</li>
+                <li>Navigate monthly increasing rental costs.</li>
+                <li>Compete against other businesses on the Zuidplein.</li>
+                <li>Outlast competitors or face game over when unable to pay rent.</li>
+            </ul>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Screenshots</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <img src="screenshot1.jpg" alt="Screenshot 1" class="w-full h-48 object-cover">
+                <img src="screenshot2.jpg" alt="Screenshot 2" class="w-full h-48 object-cover">
+                <img src="screenshot3.jpg" alt="Screenshot 3" class="w-full h-48 object-cover">
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <form id="contactForm" class="bg-white p-6 rounded shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" class="w-full border border-gray-300 p-2 rounded" rows="4"
+                        required></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 text-center">
+        <p>&copy; 2024 Café Tycoon Team. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
