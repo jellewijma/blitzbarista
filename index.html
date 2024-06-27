@@ -2,73 +2,289 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Tycoon - School Project</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Barista Blitz</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+	<!-- Animation CSS-->
+	<style>
+		.slide-in-bottom {
+			-webkit-animation: slide-in-bottom .5s cubic-bezier(.25, .46, .45, .94) both;
+			animation: slide-in-bottom .5s cubic-bezier(.25, .46, .45, .94) both
+		}
+
+		.slide-in-bottom-h1 {
+			-webkit-animation: slide-in-bottom .5s cubic-bezier(.25, .46, .45, .94) .5s both;
+			animation: slide-in-bottom .5s cubic-bezier(.25, .46, .45, .94) .5s both
+		}
+
+		.slide-in-bottom-subtitle {
+			-webkit-animation: slide-in-bottom .5s cubic-bezier(.25, .46, .45, .94) .75s both;
+			animation: slide-in-bottom .5s cubic-bezier(.25, .46, .45, .94) .75s both
+		}
+
+		.fade-in {
+			-webkit-animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 1.000) 1s both;
+			animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 1.000) 1s both
+		}
+
+		.bounce-top-icons {
+			-webkit-animation: bounce-top .9s 1s both;
+			animation: bounce-top .9s 1s both
+		}
+
+		@-webkit-keyframes slide-in-bottom {
+			0% {
+				-webkit-transform: translateY(1000px);
+				transform: translateY(1000px);
+				opacity: 0
+			}
+
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				opacity: 1
+			}
+		}
+
+		@keyframes slide-in-bottom {
+			0% {
+				-webkit-transform: translateY(1000px);
+				transform: translateY(1000px);
+				opacity: 0
+			}
+
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				opacity: 1
+			}
+		}
+
+		@-webkit-keyframes bounce-top {
+			0% {
+				-webkit-transform: translateY(-45px);
+				transform: translateY(-45px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in;
+				opacity: 1
+			}
+
+			24% {
+				opacity: 1
+			}
+
+			40% {
+				-webkit-transform: translateY(-24px);
+				transform: translateY(-24px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			65% {
+				-webkit-transform: translateY(-12px);
+				transform: translateY(-12px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			82% {
+				-webkit-transform: translateY(-6px);
+				transform: translateY(-6px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			93% {
+				-webkit-transform: translateY(-4px);
+				transform: translateY(-4px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			25%,
+			55%,
+			75%,
+			87% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				-webkit-animation-timing-function: ease-out;
+				animation-timing-function: ease-out
+			}
+
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				-webkit-animation-timing-function: ease-out;
+				animation-timing-function: ease-out;
+				opacity: 1
+			}
+		}
+
+		@keyframes bounce-top {
+			0% {
+				-webkit-transform: translateY(-45px);
+				transform: translateY(-45px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in;
+				opacity: 1
+			}
+
+			24% {
+				opacity: 1
+			}
+
+			40% {
+				-webkit-transform: translateY(-24px);
+				transform: translateY(-24px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			65% {
+				-webkit-transform: translateY(-12px);
+				transform: translateY(-12px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			82% {
+				-webkit-transform: translateY(-6px);
+				transform: translateY(-6px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			93% {
+				-webkit-transform: translateY(-4px);
+				transform: translateY(-4px);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			25%,
+			55%,
+			75%,
+			87% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				-webkit-animation-timing-function: ease-out;
+				animation-timing-function: ease-out
+			}
+
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				-webkit-animation-timing-function: ease-out;
+				animation-timing-function: ease-out;
+				opacity: 1
+			}
+		}
+
+		@-webkit-keyframes fade-in {
+			0% {
+				opacity: 0
+			}
+
+			100% {
+				opacity: 1
+			}
+		}
+
+		@keyframes fade-in {
+			0% {
+				opacity: 0
+			}
+
+			100% {
+				opacity: 1
+			}
+		}
+	</style>
+
 </head>
 
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-blue-600 text-white p-6">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-bold">Café Tycoon</h1>
-            <p class="mt-2">A Strategic Business Simulation Game</p>
-        </div>
-    </header>
 
-    <main class="container mx-auto p-6">
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
-            <p>Welcome to Café Tycoon, a strategic business simulation game where players manage their own café and
-                compete against other businesses on the Zuidplein. Players must navigate rising rental costs and aim to
-                outlast their competitors.</p>
-        </section>
+<body class="leading-normal tracking-normal text-gray-900" style="font-family: 'Source Sans Pro', sans-serif;">
 
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">Key Features</h2>
-            <ul class="list-disc list-inside">
-                <li>Manage and grow your own café.</li>
-                <li>Navigate monthly increasing rental costs.</li>
-                <li>Compete against other businesses on the Zuidplein.</li>
-                <li>Outlast competitors or face game over when unable to pay rent.</li>
-            </ul>
-        </section>
 
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">Screenshots</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <img src="screenshot1.jpg" alt="Screenshot 1" class="w-full h-48 object-cover">
-                <img src="screenshot2.jpg" alt="Screenshot 2" class="w-full h-48 object-cover">
-                <img src="screenshot3.jpg" alt="Screenshot 3" class="w-full h-48 object-cover">
-            </div>
-        </section>
 
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-            <form id="contactForm" class="bg-white p-6 rounded shadow-md">
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-bold mb-2">Name:</label>
-                    <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded" required>
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-bold mb-2">Email:</label>
-                    <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded" required>
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-sm font-bold mb-2">Message:</label>
-                    <textarea id="message" class="w-full border border-gray-300 p-2 rounded" rows="4"
-                        required></textarea>
-                </div>
-                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send Message</button>
-            </form>
-        </section>
-    </main>
+	<!-- <div class="h-screen pb-14 bg-right bg-cover" style="background-image:url('bg.svg');"> -->
+	<div class="h-screen pb-14 bg-right bg-cover">
+		<!--Nav-->
+		<div class="w-full container mx-auto p-6">
 
-    <footer class="bg-gray-800 text-white p-6 text-center">
-        <p>&copy; 2024 Café Tycoon Team. All Rights Reserved.</p>
-    </footer>
+			<div class="w-full flex items-center justify-between">
+				<a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+					href="#">
+					<img src="logo.png" alt="logo barista blitz, cat with a cup of coffe " srcset="">
+				</a>
 
-    <script src="script.js"></script>
+				<div class="flex w-1/2 justify-end content-center">
+					<a class="inline-block text-[#6d4d42] no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 "
+						data-tippy-content="#linkedin_id" href="https://www.linkedin.com/shareArticle?mini=true&url=#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-[#6d4d42]">
+							<path
+								d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+						</svg>
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--Main-->
+		<div class="container pt-12 md:pt-24 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+
+			<!--Left Col-->
+			<div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+				<h1
+					class="my-4 text-3xl md:text-5xl text-[#6d4d42] font-bold leading-tight text-center md:text-left slide-in-bottom-h1">
+					Barista Blitz</h1>
+				<p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Fight to
+					be the last cafe standing</p>
+				<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
+					<div class="bg-white py-6 sm:py-8 lg:py-12">
+						<div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+							<div
+								class="flex flex-col items-center justify-between gap-4 rounded-lg bg-gray-100 py-2 md:py-4 p-4 sm:flex-row md:p-8">
+								<div>
+									<h2 class="text-xl font-bold text-[#6d4d42] md:text-2xl">Play now</h2>
+								</div>
+
+								<a href="https://jellewijma.github.io/CLE4"
+									class="inline-block rounded-lg bg-[#6d4d42] px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Barist
+									Blitz &#10140; </a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!--Right Col-->
+			<div class="w-full xl:w-3/5 py-6 overflow-y-hidden">
+				<img class="w-5/6 mx-auto slide-in-bottom" src="phone.png">
+			</div>
+
+			<!--Footer-->
+			<div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
+				<a class="text-gray-500 no-underline hover:no-underline" href="#">&copy; CLE4 2024</a>
+			</div>
+
+		</div>
+
+
+	</div>
+
 </body>
 
 </html>
